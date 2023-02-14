@@ -34,11 +34,6 @@ const handlePosition = (pos: 'top' | 'top-right' | 'top-left') => {
 <script lang="ts">
 export default {
   name: 'Alert',
-  computed: {
-    alertIcon() {
-      return defineAsyncComponent(() => import(`./icons/${this.type}Icon.vue`));
-    },
-  },
   methods: {
     onClickSecondary() {
       this.$emit('onClickSecondary');
@@ -58,6 +53,9 @@ export default {
     onlyTitle() {
       return !this.checkSlot('description') && this.checkSlot('title');
     },
+    alertIcon(type: string) {
+      return defineAsyncComponent(() => import(`./icons/${type}Icon.vue`));
+    },
   },
 };
 </script>
@@ -70,7 +68,7 @@ export default {
     } ${onlyTitle() ? 'items-center' : 'items-start'}`"
   >
     <div :class="`${onlyDescription() ? 'w-6 h-6' : 'w-8 h-8'}`">
-      <component :is="alertIcon" />
+      <component :is="alertIcon(type)" />
     </div>
     <div class="grow flex flex-col gap-2">
       <div v-if="checkSlot('title')" class="order-none self-stretch">

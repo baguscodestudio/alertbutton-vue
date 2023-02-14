@@ -6,6 +6,8 @@ This was made for a coding test in Mind Lens
 
 ## Alert
 
+It is suggested to put the alert component on the top of html tree
+
 ```vue
 <script lang="ts">
 import { ref } from 'vue';

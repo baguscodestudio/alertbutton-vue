@@ -5,7 +5,7 @@ let visible = ref(true);
 </script>
 
 <template>
-  <Alert :show="visible" @onClose="visible = false">
+  <Alert :show="visible" @onClose="visible = false" type="success">
     <template #title>Testing one two three</template>
     <template #description>Testing one two three</template>
   </Alert>
