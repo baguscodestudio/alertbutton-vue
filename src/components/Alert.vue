@@ -73,10 +73,13 @@ export default {
       <component :is="alertIcon" />
     </div>
     <div class="grow flex flex-col gap-2">
-      <div v-if="checkSlot('title')" class="order-none">
+      <div v-if="checkSlot('title')" class="order-none self-stretch">
         <slot name="title" />
       </div>
-      <div v-if="checkSlot('description')" class="font-normal order-1">
+      <div
+        v-if="checkSlot('description')"
+        class="font-normal order-1 self-stretch"
+      >
         <slot name="description" />
       </div>
       <div
