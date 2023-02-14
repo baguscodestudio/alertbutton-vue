@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: 'Open Sans', sans-serif;
+  line-height: 24px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+@layer components {
+  .btn {
+    @apply py-2 inline-flex gap-2 items-center justify-center rounded-lg;
+  }
+  .btn:hover {
+    filter: drop-shadow(0px 6px 10px rgba(0, 0, 0, 0.14))
+      drop-shadow(0px 1px 18px rgba(0, 0, 0, 0.12));
+  }
+  .btn-primary {
+    @apply bg-orange-30 hover:bg-orange-40 transition-all duration-200 text-coolgrey-100;
+  }
+  .btn-secondary {
+    @apply bg-white transition-all duration-200 text-orange-90 border-[1px] border-orange-90;
+  }
+  .btn-error {
+    @apply border-red-80 text-red-80;
+  }
+  .btn-warning {
+    @apply border-orange-90 text-orange-90;
+  }
+  .btn-success {
+    @apply border-green-80 text-green-80;
+  }
+
+  .notification {
+    @apply w-[20.625rem] md:w-[45rem] rounded-md border-[1px] flex gap-3 justify-between text-coolgrey-100;
+  }
+  .info {
+    @apply bg-blue-0 border-blue-60;
+  }
+  .error {
+    @apply bg-red-0 border-red-80;
+  }
+  .warning {
+    @apply bg-orange-05 border-orange-80;
+  }
+  .success {
+    @apply bg-green-0 border-green-80;
+  }
+
+  .abs-top {
+    @apply top-4 -translate-x-1/2 left-1/2;
+  }
+  .abs-topright {
+    @apply top-4 right-4;
+  }
+  .abs-topleft {
+    @apply top-4 left-4;
+  }
+}
