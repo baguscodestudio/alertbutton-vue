@@ -2,7 +2,7 @@
 
 A simple vue component library for Alert and Button.
 
-### [Demo](https://idyllic-elf-c144ac.netlify.app/)
+### [Demo](https://alertbutton.bagusgandhi.dev/)
 
 This was made for a coding test in Mind Lens
 
